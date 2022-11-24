@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
@@ -6,14 +7,11 @@ int main() {
   int R;
   int C;
   double percent;
-  double pi = 3.14;
   
   cin >> R >> C;
-  R = R*R;
-  C = C*C;
   
-  percent = ((pi*R)-(pi*C))/(pi*R);
-  percent = (1-percent)*100;
+  percent = ((pow(R-C,2))/(pow(R,2)))*100.0;
+  
   cout.precision(10);
   cout << percent;
 }
